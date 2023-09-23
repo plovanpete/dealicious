@@ -1,4 +1,5 @@
 import googlemaps
+from editMapdata to *
 
 # Google API Key used for Google Maps!
 GOOGLE_API_KEY = 'AIzaSyBRrTFJpK4ZqpjHwMF45OUdwwhRH0D_e5Y'
