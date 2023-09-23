@@ -8,39 +8,42 @@
 # 
 import csv
 
-inputFile = "mapData.csv"
+inputFile = 'mapData.csv'
 
-class MapFile:
-	def __init__(self, fileName):
-		self.fileName = fileName
+def printFile(file):
+    with open(file, 'r') as csvfile:
+        datareader = csv.reader(csvfile)
+        for row in datareader:
+            for value in row:
+                print(value)
+	
+def readFile(file):
+    f = open(file, 'r')				
 
-	def readFile():
-		file = open(fileName, "r")
+def writeFile(file):
+    f = open(file, 'w')
+
+def closeFile(file):
+    file.close()
+
+def addData(fileName):
+    file.writeFile()
 		
+    closeFile()
 
-	def writeFile():
-		file = open(fileName, "w")
-
-	def closeFile():
-		f.close()
-
-	def addData():
-		f.writeFile()
+def removeData():
+    f.writeFile()
 		
-		closeFile()
+    closeFile()
 
-	def removeData():
-		f.writeFile()
-		
-		closeFile()
-
-	def getFileName():
-		return fileName
+def getFileName(fileName):
+    return fileName
 
 def main():
-	file = MapFile(inputFile)
 
-	print(file.getFileName())
-	print("HELLO WORLD")
+    printFile(inputFile)
+    print("Main has run")
 
-	
+
+if __name__ == "__main__":
+    main()
