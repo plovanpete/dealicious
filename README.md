@@ -1,2 +1,2 @@
-# DEALicious
+# Dealicious
 Find deals in a location!
