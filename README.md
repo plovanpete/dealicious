@@ -38,7 +38,7 @@ We DO NOT need to specify the path since we already did it in the previous steps
 Now that we've set the views that can allow the User to access it (not quite), we may begin the next step (if you want to navigate to another route), which is creating a Route to the server!
 
 ## How to create a route in Django!
-1. Make a copy of views and rename it to urls(recommended)
+1. Make a copy of views and rename it to urls(recommended) [Located inside the folder with apps.py]
 2. insert a line with "from django.urls import path" this allows us to specify the route!
 3. insert a line under that with "from .import views" to allow our recent views.py to this new python file!
 4. This is MOST IMPORTANT! make a list, urlpatterns and put the path() function inside it, like this: urlpatterns = [path()]
@@ -50,6 +50,8 @@ Now that we've set the views that can allow the User to access it (not quite), w
 3. Add a path function, with your route, path('app/', include('app.urls')), to add your site to the urlpatterns!
 4. We made a website, YIPEEE!!!
 5. run the server and check up on your local server, localhost:(yournumber)/app/views (this is a template, not really real!)
+6. you may choose to get rid of the /views by going to your urls.py located in your app folder and leaving an empty string instead of myview/
+
 
 ## Editing your webpage, with CSS style and HTML structure!
-1. Go back to your folder with your apps, 
+1. Go back to your folder with your apps, and 
