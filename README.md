@@ -54,4 +54,16 @@ Now that we've set the views that can allow the User to access it (not quite), w
 
 
 ## Editing your webpage, with CSS style and HTML structure!
-1. Go back to your folder with your apps, and 
+1. Go back to your folder with your apps, and create two folders, static/css/
+2. create a style.css file either by using the cmd echo or using your IDE to make a css file!
+3. Now editing the style.css file, you can edit it with a *{} where inside the curly brakcets, you can choose your options (in the IDE) to edit stuff, mainly, we can edit the text-alignment, the text color, and the background color!
+4. We'll have to specify these conditions by going back to the non-app folder, and into the settings.py, scrolling until you see the TEMPLATE. Copy your os.path.join(BASE_DIR, "app/htmltemplates")
+5. Scroll down to the STATIC_URL and add a line under it saying STATICFILES_DIRS = [your copied code here and rename your htmltemplate to your static folder]
+
+Now that we've created a totally spooky website, let's get to coding with HTML!
+
+## A Guide: HTML for Funnies! (Any opener and closers have <> on them at the beginning and ends.)
+1. Every html will need to be declared first with a "!DOCTYPE html" on top of it. This is needed for the webpage to know about its source.
+2. You then head in with the openers and closers, the html and /html; the head and /head; the body and /body; and the p and /p.
+3. After you code up the HTML, we will now use something that Django has, which is logic for HTML! (Crazy, right?!) Under the !DOCTYPE html, type "{% load static %}" this allows us to get our colors and templates from the style.css!
+4. under your title opener and headers, you can create a link which uses the css, such as link rel = "stylesheet" type= "text/css" href="{% static '/css/style.css'%}"

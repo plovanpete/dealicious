@@ -1,1 +1,22 @@
-Dealicious Deals 
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title> Dealicious </title>
+        <link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}">
+        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+        <body>
+            <p> Find Deals Near You!</p>
+            <iframe
+                width="600"
+                height="450"
+                style="border:0"
+                loading="lazy"
+                allowfullscreen
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBRrTFJpK4ZqpjHwMF45OUdwwhRH0D_e5Y
+                &q=Space+Needle,Seattle+WA">
+            </iframe>
+        </body>
+    </head>
+</html>
