@@ -18,7 +18,7 @@ To create an app, use the command "python manage.py startapp (Insert Name Here)"
 ## How to allow your HTML Website onto Django!
 Now that we created an app, we may begin with making a website!
 
-This is optional, but I would recommend creating a directory for your html either by using the cmd "mkdir (Insert Name Here)" or adding a new folder!
+This is needed, so you must create a directory for your html either by using the cmd "mkdir (Insert Name Here)" or adding a new folder! (inside the apps folder)
 
 Afterwards, create an html file, with once again, either by using the cmd "echo (Insert message here) > (Insert Name Here).html to create an html file, or you could just completely create and convert a file by using an IDE to create one for you!
 
@@ -26,7 +26,7 @@ Now that your HTML file has been created, one must go back to the settings.py in
 
 1. Add a import os under the line "from pathlib import Path" this allows specification of paths in the templates.
 2. Go down till you see TEMPLATES with a blank DIRS list, this is what we are going to need!
-3. Inside the DIRS[] type os.path.join(BASE_DIR, (2ndInnerFolder/FolderForYourHTMLTemplates))
+3. Inside the DIRS[] type os.path.join(BASE_DIR, (AppFolder/HTMLFolder))
 
 Now that's made, let's get started on how to respond the server with a webpage!
 
