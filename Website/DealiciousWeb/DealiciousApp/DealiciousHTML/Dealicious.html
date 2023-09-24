@@ -37,7 +37,6 @@
 
         <ul class="navbar">
         <li class="nav-item"><a href="/DealiciousApp">Home</a></li>
-        <li class="nav-item"><a href="/DealiciousApp/Report">Report Deal</a></li>
         </ul>
     </body>
 </html>
@@ -217,26 +216,67 @@
         </body>
     </head>
 
+    <h2>
+        Insert your Deals here!
+    </h2>
+
     <style>
     table, th, td {
         border:1px solid black;
     }
     </style>
-    <h2> Deals Reported by YOU! </h2>
-    <table style = "width:100%">
-        <tr>
-            <th>Place</th>
-            <th>City</th>
-            <th>State</th>
-            <th>Address</th>
-            <th>Deal</th>
-        </tr>
-        <tr>
-            <td>China Star</td>
-            <td>Iowa City</td>
-            <td>Iowa</td>
-            <td>South Clinton Street</td>
-            <td>%50 off from 10:30-3 pm!</td>
-        </tr>
+
+    <div class="banner-info" align="center">
+        <span><label>Place </label></span>
+        <span><input id="inputPlace" type="text" class="text-center" required=""></span><br>
+        <span><label>City </label></span>
+        <span><input id="inputCity" type="text" class="text-center" required=""></span><br>
+        <span><label>State </label></span>
+        <span><input id="inputState" type="text" class="text-center" required=""></span><br>
+        <span><label>Address </label></span>
+        <span><input id="inputAddress" type="text" class="text-center" required=""></span><br>
+        <span><label>Deal </label></span>
+        <span><input id="inputDeal" type="text" class="text-center" required=""></span><br>
+    </div>
+    <div class="logo">
+        <input type="button" onClick="insertData()" value="Add Deals!">
+    </div>
+    <script language="javascript">
+        function insertData() {
+            var place = document.getElementById("inputPlace").value;
+            var city = document.getElementById("inputCity").value;
+            var state = document.getElementById("inputState").value;
+            var address = document.getElementById("inputAddress").value;
+            var deal = document.getElementById("inputDeal").value;
+
+            document.getElementById("insertionPoint").innerHTML += "<tr><td>" + place + "</td><td>" + city + "</td><td>" + state + "</td><td>" + address + "</td><td>"+ deal + "</td></tr>";
+          
+            // The below part is to clear the values after the entry is added.
+            document.getElementById("inputPlace").value = "";
+            document.getElementById("inputCity").value = "";
+            document.getElementById("inputState").value = "";
+            document.getElementById("inputAddress").value = "";
+            document.getElementById("inputDeal").value = "";
+        }
+    </script>
+    <table id="t1">
+        <caption>Customer Table</caption>
+        <colgroup>
+            <col span="2" class="c2">
+            <col>
+            <col class="c1">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Place</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Address</th>
+                <th>Deal</th>
+            </tr>
+        </thead>
+        <tbody id="insertionPoint">
+          
+        </tbody>
     </table>
 </html>
