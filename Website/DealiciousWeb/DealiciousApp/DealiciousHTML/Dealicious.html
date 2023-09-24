@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-{% load static %}
 <html>
     <head>
+        {% load static %}
         <title> Dealicious </title>
         <link rel="stylesheet" type="text/css" href="{% static '/css/style.css'%}">
         <link rel="icon" href="{% static 'images/favicon.ico' %}">
+<html>
+    <head>
+        <style>
+            ul.navbar {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color: #333;
+            }
+
+            li.nav-item {
+                float: left;
+            }
+
+            li.nav-item a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            li.nav-item a:hover {
+                background-color: #555;
+            }
+            </style>
+    </head>
+    <body>
+
+        <ul class="navbar">
+        <li class="nav-item"><a href="#">Home</a></li>
+        <li class="nav-item"><a href="#">Report Deal</a></li>
+        </ul>
+    </body>
+</html>
         <body>
             <p> Find Deals Near You!</p>
             <iframe
@@ -15,7 +51,7 @@
                 allowfullscreen
                 referrerpolicy="no-referrer-when-downgrade"
                 src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBRrTFJpK4ZqpjHwMF45OUdwwhRH0D_e5Y
-                &q=Bluebird+Diner,Iowa+City+IA">
+                &q=Space+Needle,Seattle+WA">
             </iframe>
         </body>
     </head>
